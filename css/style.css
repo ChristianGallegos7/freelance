@@ -10,15 +10,18 @@
     --primario: rgba(255, 193, 7, 1);
     --secundario: #0097a7;
     --gris: #757575;
+    --grisClaro: #DFE9F3;
 }
 
 html {
     font-size: 62.5%;
+    scroll-snap-type: y mandatory;
 }
 
 body {
     font-size: 16px;
     font-family: 'Krub', sans-serif;
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%);
 }
 
 h1 {
@@ -49,14 +52,16 @@ h3 {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: .5rem;
-    width: 90%;
+    width: auto;
     text-align: center;
 }
 
-@media (min-width:768) {
-    .boton {
-        width: auto;
-    }
+.sombra {
+    box-shadow: 3px 9px 29px 0px rgba(38, 36, 36, 0.91);
+    -webkit-box-shadow: 3px 9px 29px 0px rgba(38, 36, 36, 0.91);
+    -moz-box-shadow: 3px 9px 29px 0px rgba(38, 36, 36, 0.91);
+    padding: 3rem;
+    border-radius: 1rem;
 }
 
 .titulo span {
@@ -70,6 +75,10 @@ h3 {
 
 .nav-bg {
     background-color: var(--secundario);
+}
+
+.contenedor__title {
+    margin-bottom: 20px;
 }
 
 .navegacion-principal {
@@ -107,6 +116,7 @@ h3 {
     background-size: cover;
     height: 450px;
     position: relative;
+    margin-bottom: 2rem;
 }
 
 .contenido-hero {
@@ -124,4 +134,86 @@ h3 {
 .contenido-hero h2,
 .contenido-hero p {
     color: var(--blanco);
+}
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.servicio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: 400;
+}
+
+.servicio p {
+    line-height: 2;
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.contact {
+    margin-top: 3rem;
+}
+
+
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: var(--primario);
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.contenedor-campos {}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block;
+}
+
+.input-text {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.enviar {
+    border: none;
 }
