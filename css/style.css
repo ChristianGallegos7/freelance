@@ -137,8 +137,20 @@ h3 {
 }
 
 .servicios {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+}
+
+.navegacion-principal {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
 }
 
 .servicio {
